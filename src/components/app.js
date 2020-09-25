@@ -31,6 +31,7 @@ export default class extends Component {
                 <Route exact path ="/new-announcement" component={newAnnouncment} />
                 <Route path ="*" component={notFound} />
             </Switch>
+            <span className="spacer"/>
             <Footer />
           </div>
       )
