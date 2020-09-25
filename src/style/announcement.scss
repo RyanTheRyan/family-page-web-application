@@ -1,0 +1,37 @@
+.announcement-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 7px 20px 7px 20px;
+    width: 100%;
+    border-top: 3px solid black;
+
+    .disable {
+        text-align: right;
+        cursor: pointer;
+
+        a {
+            font-size: 1.1em;
+            color: black;
+            transition: 0.4s ease-in;
+
+            &:hover {
+                color: red;
+            }
+        }
+    }
+
+    .announcement-content {
+        text-align: center;
+
+        .title {
+            font-size: 2em;
+            font-family: 'Fira Sans', sans-serif;
+            padding-bottom: 10px;
+        }
+
+        .content {
+            font-size: 1.1em;
+            padding: 10px 30px 10px 30px;
+        }
+    }
+}

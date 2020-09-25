@@ -7,19 +7,20 @@ export default class Announcment extends Component {
   
         this.state = {
             content: '',
-            title: ''
+            title: '',
+            isShown: true
         }
-        
+        this.disableAnnouncement = this.disableAnnouncement.bind(this)
     }
   componentDidMount() {
-    axios.get('http://localhost:5000/announcment'
+    axios.get('https://lowe-family-api.herokuapp.com/announcement'
     ).then(response => {
       console.log(response)
-      console.log("title", response.data[0].title)
-      console.log("content", response.data[0].content)
+      console.log("title", response.data.announcement[0].title)
+      console.log("content", response.data.announcement[0].content)
         this.setState({
-            title: response.data[0].title,
-            content: response.data[0].content
+            title: response.data.announcement[0].title,
+            content: response.data.announcement[0].content
         })
         console.log(response)
     }).catch(error => {
@@ -27,12 +28,26 @@ export default class Announcment extends Component {
     })
   }
 
+  disableAnnouncement() {
+    this.setState({
+      isShown: false
+    })
+  }
+
   render() {
+    if (this.state.isShown) {
       return (
           <div className="announcement-wrapper">
-              <div>{this.state.title}</div>
-              <div>{this.state.content}</div>
+            <div className="disable">
+              <a onClick={this.disableAnnouncement}>X</a>
+            </div>
+            <div className="announcement-content">
+              <div className="title">{this.state.title}</div>
+              <div className="content">{this.state.content}</div>
+            </div>
           </div>
       )
+    }
+    return <div />
   }
 }
