@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: whitesmoke;
+    background-color: #C5997B;
 
     .nav-item {
         color: black;
@@ -10,8 +10,7 @@
         padding: 20px 35px 20px 35px;
         transition: 0.5s ease-in-out;
         &:hover {
-            background-color: rgb(216, 216, 216);
-            font-weight: 900;
+            background-color: rgb(182, 182, 182);
             padding: 20px 35px 20px 35px;
         }
     }

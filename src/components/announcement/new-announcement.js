@@ -42,13 +42,18 @@ handleSubmit(event){
   render() {
       return (
           <div>
+              <h1 id="header-form">Create a new announcement</h1>
               <form onSubmit={this.handleSubmit}>
                   <div className="input-wrapper">
-                      <input type="text" name="title" placeholder="Announcement Title" value={this.state.title} onChange={this.handleChange} />
-                      <input type="text" name="content" placeholder="Announcement Content" value={this.state.content} onChange={this.handleChange} />
+                      <div className="input">
+                        <input type="text" name="title" placeholder="Announcement Title" value={this.state.title} onChange={this.handleChange} />
+                      </div>
+                      <div className="input">
+                        <textarea type="text" name="content" placeholder="Announcement Content" value={this.state.content} onChange={this.handleChange} />
+                      </div>
                   </div>
                   <div className="button-wrapper">
-                      <button type="submit">Submit</button>
+                      <button className="btn" type="submit">Submit</button>
                   </div>
               </form>
           </div>
