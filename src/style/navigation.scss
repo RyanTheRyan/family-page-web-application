@@ -1,16 +1,18 @@
 .navigation-wrapper {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     background-color: #C5997B;
 
     .nav-item {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
         color: black;
         font-size: 1.3em;
-        padding: 20px 35px 20px 35px;
+        padding: 20px;
         transition: 0.5s ease-in-out;
         &:hover {
-            background-color: rgb(182, 182, 182);
+            background-color: #e4c6b2;
             padding: 20px 35px 20px 35px;
         }
     }

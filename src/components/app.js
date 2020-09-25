@@ -8,6 +8,7 @@ import {
 import Home from './pages/home'
 import Announcment from './announcement/announcment-item'
 import Blog from './blog/blog'
+import newBlog from './blog/new-blog'
 import newAnnouncment from './announcement/new-announcement'
 import notFound from './pages/not-found'
 
@@ -28,6 +29,7 @@ export default class extends Component {
             <Switch>
                 <Route exact path ="/" component={Home} />
                 <Route exact path ="/blog" component={Blog} />
+                <Route exact path ="/new-blog" component={newBlog} />
                 <Route exact path ="/new-announcement" component={newAnnouncment} />
                 <Route path ="*" component={notFound} />
             </Switch>
