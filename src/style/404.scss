@@ -1,0 +1,24 @@
+.oops-wrapper {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    padding-top: 10vh;
+    .content {
+        display: grid;
+        grid-template-rows: 2fr 1fr 1fr;
+        justify-content: center;
+        text-align: center;
+        h1 {
+            font-size: 4em;
+        }
+
+        p {
+            font-size: 1.1em;
+        }
+    }
+
+    .image {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+    }
+}
