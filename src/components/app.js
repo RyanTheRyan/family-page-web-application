@@ -13,6 +13,7 @@ import newAnnouncment from './announcement/new-announcement'
 import notFound from './pages/not-found'
 
 import NavigationContainer from './navigation/NavigationContainer'
+import Footer from './pages/footer'
 
 export default class extends Component {
   constructor(props) {
@@ -32,6 +33,7 @@ export default class extends Component {
                 <Route exact path ="/new-announcement" component={newAnnouncment} />
                 <Route path ="*" component={notFound} />
             </Switch>
+            <Footer />
           </div>
       )
   }
