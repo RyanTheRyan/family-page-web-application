@@ -15,14 +15,10 @@ export default class Announcment extends Component {
   componentDidMount() {
     axios.get('https://lowe-family-api.herokuapp.com/announcement'
     ).then(response => {
-      console.log(response)
-      console.log("title", response.data.announcement[0].title)
-      console.log("content", response.data.announcement[0].content)
         this.setState({
             title: response.data.announcement[0].title,
             content: response.data.announcement[0].content
         })
-        console.log(response)
     }).catch(error => {
       console.log("Announcements detail error", error)
     })
